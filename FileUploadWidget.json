@@ -1,0 +1,41 @@
+{
+	"name": "FileUploadWidget",
+	"description": "File Upload Widget",
+	"newInstancePrefix": "fileuploadwidget",
+	"eula": "",
+	"vendor": "Moin",
+	"license": "",
+	"id": "fileuploadwidget",
+	"version": "1.0.1",
+	"icon": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "custom-button",
+			"url": "",
+			"integrity": ""	, 
+			"ignoreIntegrity": true
+			
+		}		
+	],
+	"properties": {
+		"width": {
+			"type": "integer",
+			"default": 192
+		},
+		"height": {
+			"type": "integer",
+			"default": 32
+		}
+	},
+	"methods": {
+		"clear": {
+			"description": "Clear the resultset"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the button."
+		}
+	}
+}
