@@ -21,7 +21,9 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");     
+            console.log("OnClick Triggered");  
+            //write logic here to handleFile
+            alert("show alert - "+document.getElementById('btnFileUpload').type);
             
         }        
         
