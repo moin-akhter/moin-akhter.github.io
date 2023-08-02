@@ -26,16 +26,30 @@
 		"height": {
 			"type": "integer",
 			"default": 32
-		}
+		}, 
+		 "text": {
+			"type": "string"
+	  }
 	},
 	"methods": {
 		"clear": {
 			"description": "Clear the resultset"
 		},
 		"getData": {
-      "parameters": [],
-      "body": "this.id",
-      "returnType": "string[]"
+      		"parameters": [],
+		"body": "return this.text;",
+	        "returnType": "string"
+	        },
+		"setData": {
+		     "description": "",
+      		     "parameters": [ {
+			"name": "value",
+			"type": "string",
+			"description": ""
+			}
+			],
+		"body": "this.text = value;"
+	        }
 	},
 	"events": {
 		"onClick": {
