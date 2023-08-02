@@ -1,7 +1,38 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<input type="file" id="fileInput"><button type="button" id="btnFileUpload">Upload</button>` ;   
+    `<input type="file" id="fileInput"><button type="button" onclick="handleFile()" id="btnFileUpload">Upload</button><script>function handleFile() {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const fileContent = e.target.result;
+      const dataArray = parseFileContent(fileContent);
+      // Use the dataArray as needed
+      console.log(dataArray);
+    };
+    reader.readAsText(file);
+  } else {
+    //alert('Please select a file before uploading.');
+  }
+}
+// Function to parse the file content and store it in a JavaScript array
+function parseFileContent(fileContent) {
+  const lines = fileContent.trim().split('\n');
+  const headers = lines[0].trim().split('\t');
+  const dataArray = [];
+  for (let i = 1; i < lines.length; i++) {
+    const columns = lines[i].trim().split('\t');
+    const dataObject = {};
+    for (let j = 0; j < headers.length; j++) {
+      dataObject[headers[j]] = columns[j];
+    }
+    dataArray.push(dataObject);
+  }
+  return dataArray;
+}
+</script>` ;   
    
     class PerformanceHelp extends HTMLElement {
         constructor() {
