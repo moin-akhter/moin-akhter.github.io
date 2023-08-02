@@ -31,7 +31,11 @@
 	"methods": {
 		"clear": {
 			"description": "Clear the resultset"
-		}
+		},
+		"getData": {
+      "parameters": [],
+      "body": "this.id",
+      "returnType": "string[]"
 	},
 	"events": {
 		"onClick": {
