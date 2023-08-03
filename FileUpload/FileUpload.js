@@ -9,8 +9,7 @@
             this.init();           
         }
 
-        init() {            
-              
+        init() {                       
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.addEventListener("click", event => {
