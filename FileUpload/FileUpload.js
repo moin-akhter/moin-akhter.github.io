@@ -15,7 +15,8 @@
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.addEventListener("click", event => {
             var event = new Event("onClick");
-            this.fireChanged();           
+            this.fireChanged();  
+            this handleFile();             
             this.dispatchEvent(event);
             });           
         }
@@ -24,7 +25,9 @@
             //write logic here to handleFile
             //alert("show alert - "+document.getElementById('btnFileUpload').type);
             
-        }       
+        }  
+        handleFile() {
+            console.log("handleFile triggered - checkpoint Moin"); 
     }
 
     customElements.define('file-upload', FileUploadClass);
