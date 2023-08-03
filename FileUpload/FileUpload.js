@@ -13,11 +13,11 @@
               
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
-            var event = new Event("onClick");
+            //this.addEventListener("click", event => {
+            //var event = new Event("onClick");
             this.fireChanged();  
             //this handleFile();             
-            this.dispatchEvent(event);
+            //this.dispatchEvent(event);
             });           
         }
         fireChanged() {
