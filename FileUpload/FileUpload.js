@@ -21,7 +21,6 @@
         fireChanged() {
             console.log("OnClick Triggered - checkpoint Moin");  
         }  
- 
     customElements.define('file-upload', FileUploadClass);
     
 })();
