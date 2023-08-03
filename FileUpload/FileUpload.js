@@ -24,7 +24,8 @@
             //write logic here to handleFile
             //alert("show alert - "+document.getElementById('btnFileUpload').type);
             
-        }    
+        }   
+        /*
         function handleFile() {
   const fileInput = document.getElementById('fileInput');
   const file = fileInput.files[0];
@@ -56,7 +57,7 @@ function parseFileContent(fileContent) {
   }
   return dataArray;
 }
-        
+*/        
     }
 
     customElements.define('file-upload', FileUploadClass);
