@@ -23,6 +23,7 @@
         fireChanged() {
             console.log("OnClick Triggered - checkpoint Moin");  
             //write logic here to handleFile
+            /*
             //alert("show alert - "+document.getElementById('btnFileUpload').type);
              const fileInput = document.getElementById('fileInput');
              const file = fileInput.files[0];
@@ -41,7 +42,7 @@
     //alert('Please select a file before uploading.');
                 console.log("Please select a file before uploading.");
   }
-            
+       */     
         }  
  /*
         // Function to parse the file content and store it in a JavaScript array
