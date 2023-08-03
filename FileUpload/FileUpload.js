@@ -30,9 +30,11 @@
     const reader = new FileReader();
     reader.onload = function(e) {
       const fileContent = e.target.result;
-      const dataArray = parseFileContent(fileContent);
+     // const dataArray = parseFileContent(fileContent);
       // Use the dataArray as needed
-      console.log(dataArray);
+     // console.log(dataArray);
+        console.log(fileContent);
+        
     };
     reader.readAsText(file);
   } else {
@@ -41,7 +43,8 @@
   }
             
         }  
- // Function to parse the file content and store it in a JavaScript array
+ /*
+        // Function to parse the file content and store it in a JavaScript array
 function parseFileContent(fileContent) {
   const lines = fileContent.trim().split('\n');
   const headers = lines[0].trim().split('\t');
@@ -60,7 +63,7 @@ function parseFileContent(fileContent) {
 
   return dataArray;
 }
-
+*/
     customElements.define('file-upload', FileUploadClass);
     
 })();
