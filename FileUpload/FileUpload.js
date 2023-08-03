@@ -16,7 +16,7 @@
             this.addEventListener("click", event => {
             var event = new Event("onClick");
             this.fireChanged();  
-            this handleFile();             
+            //this handleFile();             
             this.dispatchEvent(event);
             });           
         }
