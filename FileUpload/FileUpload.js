@@ -1,8 +1,8 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<button type="button" id="btnUpload">Upload</button>` ;   
-   
+    `<button type="button" id="btnUpload">Upload Test</button>` ;   
+    
     class PerformanceHelp extends HTMLElement {
         constructor() {
             super();
@@ -21,10 +21,8 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");     
-            
-        }        
-        
+            console.log("OnClick Triggered");                 
+        }                
     }
 
     customElements.define('custom-button', PerformanceHelp);
