@@ -1,7 +1,7 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<input type="file" id="fileInput"><button type="button" id="btnUpload">Upload Test</button>` ;   
+    `<input type="file" id="fileInput"> <button type="button" id="btnUpload">Upload Test</button>` ;   
     
     class CustLoad extends HTMLElement {
         constructor() {
