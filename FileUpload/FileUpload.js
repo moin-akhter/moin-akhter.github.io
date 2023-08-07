@@ -1,7 +1,7 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<button type="button" id="myBtn">Helper Button</button>` ;   
+    `<button type="button" id="btnUpload">Upload</button>` ;   
    
     class PerformanceHelp extends HTMLElement {
         constructor() {
@@ -27,5 +27,5 @@
         
     }
 
-    customElements.define('custom-button', PerformanceHelp);
+    customElements.define('file-load', PerformanceHelp);
 })();
