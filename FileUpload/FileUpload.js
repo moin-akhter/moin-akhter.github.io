@@ -25,5 +25,5 @@
         }                
     }
 
-    customElements.define('custom-button', CustLoad);
+    customElements.define('custom-fileload', CustLoad);
 })();
