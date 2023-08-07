@@ -27,5 +27,5 @@
         
     }
 
-    customElements.define('cust-button', CustClass);
+    customElements.define('custom-button', CustClass);
 })();
