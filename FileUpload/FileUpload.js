@@ -3,7 +3,7 @@
     tmpl.innerHTML = 
     `<button type="button" id="btnUpload">Upload</button>` ;   
    
-    class CustomLoad extends HTMLElement {
+    class CustClass extends HTMLElement {
         constructor() {
             super();
             this.init();           
@@ -27,5 +27,5 @@
         
     }
 
-    customElements.define('custom-load', CustomLoad);
+    customElements.define('custom-load', CustClass);
 })();
