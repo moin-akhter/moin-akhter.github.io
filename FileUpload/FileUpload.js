@@ -22,10 +22,11 @@
 
         fireChanged() {
             console.log("OnClick Triggered");
-            const fileInput = this.document.getElementById("fileInput");
-            console.log(fileInput);
         }                
     }
 
     customElements.define('custom-fileload', CustLoad);
+  const fileInput = this.document.getElementById("fileInput");
+            console.log(fileInput);
+
 })();
