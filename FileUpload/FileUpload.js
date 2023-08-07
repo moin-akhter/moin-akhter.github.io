@@ -27,5 +27,5 @@
         
     }
 
-    customElements.define('file-load', PerformanceHelp);
+    customElements.define('custom-button', PerformanceHelp);
 })();
