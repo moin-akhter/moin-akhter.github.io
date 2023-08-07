@@ -21,7 +21,8 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");                 
+            console.log("OnClick Triggered");
+            const fileInput = this.document.getElementById("fileInput");
         }                
     }
 
