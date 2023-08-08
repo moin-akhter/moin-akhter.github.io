@@ -18,12 +18,14 @@
             this.fireChanged();           
             this.dispatchEvent(event);
             }); 
-            const fileInput = shadowRoot.document.getElementById("fileInput");
-            console.log(fileInput);
+
         }
 
         fireChanged() {
             console.log("OnClick Triggered");
+            //this._root = this._shadowRoot.getElementById('root')
+            const fileInput = this._shadowRoot.getElementById("fileInput");
+            console.log(fileInput);
         }                
     }
 
