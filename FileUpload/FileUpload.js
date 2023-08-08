@@ -17,6 +17,8 @@
             var event = new Event("onClick");
             this.fireChanged();           
             this.dispatchEvent(event);
+                const fileInput = shadowRoot.document.getElementById("fileInput");
+            console.log(fileInput);
             });           
         }
 
@@ -26,7 +28,6 @@
     }
 
     customElements.define('custom-fileload', CustLoad);
-  const fileInput = this.document.getElementById("fileInput");
-            console.log(fileInput);
+  
 
 })();
