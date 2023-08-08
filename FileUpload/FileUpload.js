@@ -17,9 +17,9 @@
             var event = new Event("onClick");
             this.fireChanged();           
             this.dispatchEvent(event);
-                const fileInput = shadowRoot.document.getElementById("fileInput");
+            }); 
+            const fileInput = shadowRoot.document.getElementById("fileInput");
             console.log(fileInput);
-            });           
         }
 
         fireChanged() {
