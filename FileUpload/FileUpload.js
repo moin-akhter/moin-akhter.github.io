@@ -23,12 +23,8 @@
 
         fireChanged() {
             console.log("OnClick Triggered");
-            //this._root = this._shadowRoot.getElementById('root')
-           // const fileInput = this._shadowRoot.getElementById("fileInput");
-            //console.log(fileInput);
         }                
     }
-
     customElements.define('custom-fileload', CustLoad);
   
 
