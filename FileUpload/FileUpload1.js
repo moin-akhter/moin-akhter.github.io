@@ -28,11 +28,11 @@
 
         fireChanged() {
             console.log("OnClick Triggered");
-            const file1 = this._fileInput.files[0];
-            if (file1) {
+            //const file1 = this._fileInput.files[0];
+            //if (file1) {
             //console.log(this._fileInput.files[0]);
-                console.log("File read");
-        }                
+               // console.log("File read");
+        //}                
     }
     customElements.define('custom-fileload', CustLoad);
   
