@@ -34,7 +34,6 @@
            //     console.log("File read");
        // }                
     }
-    //customElements.define('custom-fileload', CustLoad);
+
         customElement.define('custom-fileload', CustLoad);
- 
-})();
+ })();
