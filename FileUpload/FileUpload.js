@@ -1,3 +1,4 @@
+const 
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
@@ -11,9 +12,14 @@
 
         init() {            
               
-            let shadowRoot = this.attachShadow({mode: "open"});
-            shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
+            //let shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot = this.attachShadow({mode: "open"});
+            //shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._fileIput = this._shadowRoot.getElementById("fileInput");
+            this._btnUpload = this._shadowRoot.getElementById("btnUpload");
+            
+            this._btnUpload.addEventListener("click", event => {
             var event = new Event("onClick");
             this.fireChanged();           
             this.dispatchEvent(event);
