@@ -35,5 +35,5 @@
        // }                
     }
 
-        customElement.define('custom-fileload', CustLoad);
+        customElements.define('custom-fileload', CustLoad);
  })();
