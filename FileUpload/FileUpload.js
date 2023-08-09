@@ -29,6 +29,7 @@ const
 
         fireChanged() {
             console.log("OnClick Triggered");
+            console.log(this._fileInput);
         }                
     }
     customElements.define('custom-fileload', CustLoad);
