@@ -29,7 +29,9 @@ const
 
         fireChanged() {
             console.log("OnClick Triggered");
-            console.log(this._fileInput);
+            if ( var file = this._fileInput.files[0]) {
+            //console.log(this._fileInput.files[0]);
+                console.log("File read");
         }                
     }
     customElements.define('custom-fileload', CustLoad);
