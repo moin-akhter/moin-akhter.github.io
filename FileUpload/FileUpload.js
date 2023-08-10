@@ -29,7 +29,7 @@
 
         fireChanged() {
             console.log("OnClick Triggered"); 
-            const file = this._fileInput.file[0];
+            const file = this._fileInput.files[0];
             if(file) { 
                console.log(file);
             }
