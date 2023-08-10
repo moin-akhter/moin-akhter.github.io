@@ -29,7 +29,10 @@
 
         fireChanged() {
             console.log("OnClick Triggered"); 
-            //console.log(this._fileInput);
+            } //end fireChanged
+         
+    getFileData() {
+                    //console.log(this._fileInput);
             const file = this._fileInput.files[0];
             if(file) { 
                //console.log(file);
@@ -51,17 +54,14 @@
                           }
     // Use the dataArray as needed
                        //this._fileData = dataArray;
-                        console.log(this._fileData);
+                       // console.log(this._fileData);
                         };
                          reader.readAsText(file);
-                                    } //endif
-                               } //end fireChanged
-         
-    getFileData() {
-        //if(this._fileData) {
+                     } //endif
+
         console.log(this._fileData);
            return this._fileData;
-        //}
+    
     }
     
     } //end class
