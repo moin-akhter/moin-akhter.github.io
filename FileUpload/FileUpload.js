@@ -57,9 +57,9 @@
                                } //end fireChanged
          
     getFileData() {
-        if(this._fileData) {
+        //if(this._fileData) {
            return this._fileData;
-        }
+        //}
     }
     
     } //end class
