@@ -31,7 +31,8 @@
             console.log("OnClick Triggered"); 
             const file = this._fileInput.files[0];
             if(file) { 
-               console.log(file);
+               //console.log(file);
+                
             }
        }
 
