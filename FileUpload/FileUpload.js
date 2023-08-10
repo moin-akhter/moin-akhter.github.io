@@ -43,7 +43,7 @@
             }
        }
  // Function to parse the file content and store it in a JavaScript array
-function parseFileContent(fileContent) {
+  parseFileContent(fileContent) {
   const lines = fileContent.trim().split('\n');
   const headers = lines[0].trim().split('\t');
   const dataArray = [];
