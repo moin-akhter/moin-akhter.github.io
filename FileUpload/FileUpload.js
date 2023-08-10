@@ -36,7 +36,7 @@
                 const reader = new FileReader();
                    reader.onload = function(e) {
                       const fileContent = e.target.result;
-                      const dataArray = parseFileContent(fileContent);
+                      const dataArray = this.parseFileContent(fileContent);
                       // Use the dataArray as needed
                        console.log(dataArray);
                         };
@@ -44,7 +44,7 @@
             }
        }
  // Function to parse the file content and store it in a JavaScript array
-  function parseFileContent(fileContent) {
+  _parseFileContent(fileContent) {
   const lines = fileContent.trim().split('\n');
   const headers = lines[0].trim().split('\t');
   const dataArray = [];
