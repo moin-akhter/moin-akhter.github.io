@@ -1,3 +1,5 @@
+const fileData = [];
+
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
@@ -49,12 +51,19 @@
                             dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
+                       this.fileData = dataArray;
                          console.log(dataArray);
                         };
                          reader.readAsText(file);
                                     } //endif
                                } //end fireChanged
          
+    getFileData() {
+        if(this.fileData) {
+        return this.fileData;
+        }
+    }
+    
     } //end class
         
         customElements.define('custom-fileload', CustLoad); 
