@@ -15,7 +15,7 @@
             this._shadowRoot = this.attachShadow({mode: "open"});
             //shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._fileIput = this._shadowRoot.getElementById("fileInput");
+            this._fileInput = this._shadowRoot.getElementById("fileInput");
             this._btnUpload = this._shadowRoot.getElementById("btnUpload");
             
             this._btnUpload.addEventListener("click", event => {
@@ -29,7 +29,7 @@
 
         fireChanged() {
             console.log("OnClick Triggered"); 
-            console.log(this._fileInput);
+            //console.log(this._fileInput);
             const file = this._fileInput.files[0];
             if(file) { 
                //console.log(file);
