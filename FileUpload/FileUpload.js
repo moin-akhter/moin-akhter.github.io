@@ -50,7 +50,7 @@
                           }
     // Use the dataArray as needed
                        this._fileData = dataArray;
-                         console.log(dataArray);
+                        console.log(this._fileData);
                         };
                          reader.readAsText(file);
                                     } //endif
@@ -58,6 +58,7 @@
          
     getFileData() {
         //if(this._fileData) {
+        console.log(this._fileData);
            return this._fileData;
         //}
     }
