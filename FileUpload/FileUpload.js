@@ -30,6 +30,7 @@
         fireChanged() {
             console.log("OnClick Triggered");             
        }
+    }
         
         customElements.define('custom-fileload', CustLoad); 
  })();
