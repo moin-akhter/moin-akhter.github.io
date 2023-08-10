@@ -1,5 +1,3 @@
-const fileData = [];
-
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
@@ -19,7 +17,7 @@ const fileData = [];
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._fileInput = this._shadowRoot.getElementById("fileInput");
             this._btnUpload = this._shadowRoot.getElementById("btnUpload");
-            
+            this._fileData = [];
             this._btnUpload.addEventListener("click", event => {
             //this.addEventListener("click", event => {
             var event = new Event("onClick");
@@ -51,7 +49,7 @@ const fileData = [];
                             dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
-                       this.fileData = dataArray;
+                       this._fileData = dataArray;
                          console.log(dataArray);
                         };
                          reader.readAsText(file);
@@ -59,8 +57,8 @@ const fileData = [];
                                } //end fireChanged
          
     getFileData() {
-        if(this.fileData) {
-        return this.fileData;
+        if(this._fileData) {
+           return this._fileData;
         }
     }
     
