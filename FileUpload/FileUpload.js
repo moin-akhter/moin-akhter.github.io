@@ -36,36 +36,26 @@
                 const reader = new FileReader();
                    reader.onload = function(e) {
                       const fileContent = e.target.result;
-                      const dataArray = this.parseFileContent(fileContent);
-                      // Use the dataArray as needed
-                       console.log(dataArray);
+                      //const dataArray = this.parseFileContent(fileContent);
+                        const lines = fileContent.trim().split('\n');
+                          const headers = lines[0].trim().split('\t');
+                          const dataArray = [];
+                          for (let i = 1; i < lines.length; i++) {
+                            const columns = lines[i].trim().split('\t');
+                            const dataObject = {};
+                            for (let j = 0; j < headers.length; j++) {
+                              dataObject[headers[j]] = columns[j];
+                            }
+                            dataArray.push(dataObject);
+                          }
+    // Use the dataArray as needed
+                         console.log(dataArray);
                         };
-                        reader.readAsText(file);
-            }
-       }
- // Function to parse the file content and store it in a JavaScript array
-  _parseFileContent(fileContent) {
-  const lines = fileContent.trim().split('\n');
-  const headers = lines[0].trim().split('\t');
-  const dataArray = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const columns = lines[i].trim().split('\t');
-    const dataObject = {};
-
-    for (let j = 0; j < headers.length; j++) {
-      dataObject[headers[j]] = columns[j];
-    }
-
-    dataArray.push(dataObject);
-  }
-
-  return dataArray;
-}
-
-
-        
-    }
+                         reader.readAsText(file);
+                                    } //endif
+                               } //end fireChanged
+         
+    } //end class
         
         customElements.define('custom-fileload', CustLoad); 
  })();
