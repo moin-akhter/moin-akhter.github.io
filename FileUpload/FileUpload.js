@@ -39,17 +39,18 @@
                       //const dataArray = this.parseFileContent(fileContent);
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
-                          const dataArray = [];
+                          //const dataArray = [];
+                           this._fileData = [];
                           for (let i = 1; i < lines.length; i++) {
                             const columns = lines[i].trim().split('\t');
                             const dataObject = {};
                             for (let j = 0; j < headers.length; j++) {
                               dataObject[headers[j]] = columns[j];
                             }
-                            dataArray.push(dataObject);
+                            this._fileData.push(dataObject);
                           }
     // Use the dataArray as needed
-                       this._fileData = dataArray;
+                       //this._fileData = dataArray;
                         console.log(this._fileData);
                         };
                          reader.readAsText(file);
