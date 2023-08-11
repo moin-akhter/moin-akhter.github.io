@@ -29,11 +29,7 @@
 
         fireChanged() {
             console.log("OnClick Triggered"); 
-            } //end fireChanged
-         
-    getFileData() {
-                    //console.log(this._fileInput);
-            const file = this._fileInput.files[0];
+                        const file = this._fileInput.files[0];
             if(file) { 
                //console.log(file);
                 const reader = new FileReader();
@@ -58,8 +54,11 @@
                         };
                          reader.readAsText(file);
                      } //endif
-
-        console.log(this._fileData);
+                   console.log(this._fileData);
+            } //end fireChanged
+         
+    getFileData() {
+                    //console.log(this._fileInput);
           // return this._fileData;
         const testData = ["Saab", "Volvo", "BMW"];
         return testData;
