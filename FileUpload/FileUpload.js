@@ -39,7 +39,7 @@
                       //const dataArray = this.parseFileContent(fileContent);
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
-                          //const dataArray = [];
+                          const dataArray = [];
                            //this.fileData = [];
                           for (let i = 1; i < lines.length; i++) {
                             const columns = lines[i].trim().split('\t');
@@ -47,11 +47,12 @@
                             for (let j = 0; j < headers.length; j++) {
                               dataObject[headers[j]] = columns[j];
                             }
-                            this.fileData.push(dataObject);
+                            //this.fileData.push(dataObject);
+                              this.dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
-                       //this._fileData = dataArray;
-                       // console.log(this._fileData);
+                       this.fileData = dataArray;
+                       console.log(dataArray);
                         };
                          reader.readAsText(file);
                      } //endif
@@ -59,7 +60,7 @@
             } //end fireChanged
          
     getFileData() {
-                    //console.log(this._fileInput);
+        console.log(this.fileData);
           // return this._fileData;
         const testData = ["Saab", "Volvo", "BMW"];
         return testData;
