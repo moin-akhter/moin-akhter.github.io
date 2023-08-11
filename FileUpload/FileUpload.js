@@ -51,16 +51,16 @@
                               this.dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
-                       this.fileData = dataArray;
+                       fileData = dataArray;
                        console.log(dataArray);
                         };
                          reader.readAsText(file);
                      } //endif
-                   console.log(this.fileData);
+                   console.log(fileData);
             } //end fireChanged
          
     getFileData() {
-        console.log(this.fileData);
+        console.log(fileData);
           // return this._fileData;
         const testData = ["Saab", "Volvo", "BMW"];
         return testData;
