@@ -60,7 +60,9 @@
                      } //endif
 
         console.log(this._fileData);
-           return this._fileData;
+          // return this._fileData;
+        const testData = ["Saab", "Volvo", "BMW"];
+        return testData;
     
     }
     
