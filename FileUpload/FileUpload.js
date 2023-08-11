@@ -2,15 +2,14 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
     `<input type="file" id="fileInput"><button type="button" id="btnUpload">Upload Test</button>` ;   
+    const fileData = [];
     
     class CustLoad extends HTMLElement {
         constructor() {
             super();
             this.init();           
         }
-  
-        const fileData = [];
-        
+    
         init() {            
               
             //let shadowRoot = this.attachShadow({mode: "open"});
@@ -39,7 +38,7 @@
                       //const dataArray = this.parseFileContent(fileContent);
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
-                          const dataArray = [];
+                         // const dataArray = [];
                            //this.fileData = [];
                           for (let i = 1; i < lines.length; i++) {
                             const columns = lines[i].trim().split('\t');
@@ -47,12 +46,12 @@
                             for (let j = 0; j < headers.length; j++) {
                               dataObject[headers[j]] = columns[j];
                             }
-                            //this.fileData.push(dataObject);
-                              this.dataArray.push(dataObject);
+                             fileData.push(dataObject);
+                            //  this.dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
-                       fileData = dataArray;
-                       console.log(dataArray);
+                       //fileData = dataArray;
+                       //console.log(dataArray);
                         };
                          reader.readAsText(file);
                      } //endif
@@ -61,7 +60,7 @@
          
     getFileData() {
         console.log(fileData);
-          // return this._fileData;
+          // return fileData;
         const testData = ["Saab", "Volvo", "BMW"];
         return testData;
     
