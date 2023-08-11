@@ -40,7 +40,7 @@
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
                           //const dataArray = [];
-                           this.fileData = [];
+                           //this.fileData = [];
                           for (let i = 1; i < lines.length; i++) {
                             const columns = lines[i].trim().split('\t');
                             const dataObject = {};
