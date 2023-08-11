@@ -17,7 +17,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._fileInput = this._shadowRoot.getElementById("fileInput");
             this._btnUpload = this._shadowRoot.getElementById("btnUpload");
-            this._fileData = [];
+            let fileData = [];
             this._btnUpload.addEventListener("click", event => {
             //this.addEventListener("click", event => {
             var event = new Event("onClick");
@@ -39,14 +39,14 @@
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
                           //const dataArray = [];
-                           this._fileData = [];
+                           this.fileData = [];
                           for (let i = 1; i < lines.length; i++) {
                             const columns = lines[i].trim().split('\t');
                             const dataObject = {};
                             for (let j = 0; j < headers.length; j++) {
                               dataObject[headers[j]] = columns[j];
                             }
-                            this._fileData.push(dataObject);
+                            this.fileData.push(dataObject);
                           }
     // Use the dataArray as needed
                        //this._fileData = dataArray;
@@ -54,7 +54,7 @@
                         };
                          reader.readAsText(file);
                      } //endif
-                   console.log(this._fileData);
+                   console.log(this.fileData);
             } //end fireChanged
          
     getFileData() {
