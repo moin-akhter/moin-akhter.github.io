@@ -55,15 +55,13 @@
                         };
                          reader.readAsText(file);
                      } //endif
-                   console.log(fileData);
+                 //  console.log(fileData);
             } //end fireChanged
          
     getFileData() {
-        console.log(fileData);
-          // return fileData;
-        const testData = ["Saab", "Volvo", "BMW"];
-        return testData;
-    
+        //console.log(fileData);
+          return fileData;
+   
     }
     
     } //end class
