@@ -8,7 +8,9 @@
             super();
             this.init();           
         }
-
+  
+        const fileData = [];
+        
         init() {            
               
             //let shadowRoot = this.attachShadow({mode: "open"});
@@ -16,8 +18,7 @@
             //shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._fileInput = this._shadowRoot.getElementById("fileInput");
-            this._btnUpload = this._shadowRoot.getElementById("btnUpload");
-            let fileData = [];
+            this._btnUpload = this._shadowRoot.getElementById("btnUpload");     
             this._btnUpload.addEventListener("click", event => {
             //this.addEventListener("click", event => {
             var event = new Event("onClick");
