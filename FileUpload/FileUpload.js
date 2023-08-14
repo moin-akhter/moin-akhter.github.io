@@ -38,13 +38,16 @@
                       //const dataArray = this.parseFileContent(fileContent);
                         const lines = fileContent.trim().split('\n');
                           const headers = lines[0].trim().split('\t');
+                          const headers1 = headers[0].trim().split(',');
                          // const dataArray = [];
                            //this.fileData = [];
                           for (let i = 1; i < lines.length; i++) {
-                            const columns = lines[i].trim().split('\t');
+                           // const columns = lines[i].trim().split('\t');
+                            const columns1 = lines[i].trim().split(',');
                             const dataObject = {};
-                            for (let j = 0; j < headers.length; j++) {
-                              dataObject[headers[j]] = columns[j];
+                            for (let j = 0; j < headers1.length; j++) {
+                              //dataObject[headers[j]] = columns[j];
+                              dataObject[headers1[j]] = "{id:" + columns1[j] + ", description: " + columns1[j] + "}";
                             }
                              fileData.push(dataObject);
                             //  this.dataArray.push(dataObject);
