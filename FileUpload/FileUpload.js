@@ -45,10 +45,10 @@
                            // const columns = lines[i].trim().split('\t');
                             const columns1 = lines[i].trim().split(',');
                             const dataObject = {};
-                            const vals = {};
+                           // const vals = {};
                             for (let j = 0; j < headers1.length; j++) {
                               //dataObject[headers[j]] = columns[j];
-                                vals = {id: columns1[j] , description: columns1[j] };  
+                                const vals = {id: columns1[j] , description: columns1[j] };  
                               dataObject[headers1[j]] = vals; 
                               // dataObject[headers1[j]] = columns1[j];
                             }
