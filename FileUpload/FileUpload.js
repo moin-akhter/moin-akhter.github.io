@@ -48,8 +48,8 @@
                            // const vals = {};
                             for (let j = 0; j < headers1.length; j++) {
                               //dataObject[headers[j]] = columns[j];
-                                const vals = {id: columns1[j] , description: columns1[j] };  
-                              dataObject[headers1[j]] = vals; 
+                              //  const vals = {id: columns1[j] , description: columns1[j] };  
+                              dataObject[headers1[j]] = {id: columns1[j] , description: columns1[j] }; 
                               // dataObject[headers1[j]] = columns1[j];
                             }
                              fileData.push(dataObject);
