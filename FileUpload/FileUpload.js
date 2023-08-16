@@ -44,15 +44,16 @@
                           for (let i = 1; i < lines.length; i++) {
                            // const columns = lines[i].trim().split('\t');
                             const columns1 = lines[i].trim().split(',');
-                            const dataObject = {};
-                           // const vals = {};
+                            //const dataObject = {};
+                            const dataObject1 = [];
                             for (let j = 0; j < headers1.length; j++) {
                               //dataObject[headers[j]] = columns[j];
                               //  const vals = {id: columns1[j] , description: columns1[j] };  
-                              dataObject[headers1[j]] = {id: columns1[j] , description: columns1[j] }; 
+                             // dataObject[headers1[j]] = {id: columns1[j] , description: columns1[j] }; 
+                                dataObject1[j] = columns1[j];
                               // dataObject[headers1[j]] = columns1[j];
                             }
-                             fileData.push(dataObject);
+                             fileData.push(dataObject1);
                             //  this.dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
