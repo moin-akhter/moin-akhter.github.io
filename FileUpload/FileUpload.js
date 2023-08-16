@@ -41,19 +41,25 @@
                           const headers1 = headers[0].trim().split(',');
                          // const dataArray = [];
                            //this.fileData = [];
-                          for (let i = 1; i < lines.length; i++) {
+                       
+                        //  for (let i = 1; i < lines.length; i++) {
+                         for (let i = 0; i < lines.length; i++) {
                            // const columns = lines[i].trim().split('\t');
-                            const columns1 = lines[i].trim().split(',');
+                         //   const columns1 = lines[i].trim().split(',');
                             //const dataObject = {};
-                            const dataObject1 = [];
+                           // const dataObject1 = [];
+                               const dataStr = lines[i].trim();                                                        
+                              /*
                             for (let j = 0; j < headers1.length; j++) {
                               //dataObject[headers[j]] = columns[j];
                               //  const vals = {id: columns1[j] , description: columns1[j] };  
                              // dataObject[headers1[j]] = {id: columns1[j] , description: columns1[j] }; 
-                                dataObject1[j] = columns1[j];
+                                //dataObject1[j] = columns1[j];
+                                //dataStr = dataStr + columns1[j]
                               // dataObject[headers1[j]] = columns1[j];
                             }
-                             fileData.push(dataObject1);
+                            */
+                             fileData.push(dataStr);
                             //  this.dataArray.push(dataObject);
                           }
     // Use the dataArray as needed
