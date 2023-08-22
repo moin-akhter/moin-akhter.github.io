@@ -1,7 +1,7 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<table><tr><td><button style="display:block;width:120px; height:30px;" onclick="this._shadowRoot.getElementById('fileInput').click()">Select File : </button></td><td><input type="file" id="fileInput" style="display:none"></td><td><button type="button" id="btnUpload">Upload File</button></td></tr></table>` ;   
+    `<table><tr><td><input type="file" id="fileInput" ></td><td><button type="button" id="btnUpload">Upload File</button></td></tr></table>` ;   
     const fileData = [];
     
     class CustLoad extends HTMLElement {
