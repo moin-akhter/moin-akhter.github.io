@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
     `<table><tr><td><input type="file" id="fileInput" ></td><td><button type="button" id="btnUpload">Upload File</button></td></tr></table>` ;   
-    const fileData = [];
+    let fileData = [];
     
     class CustLoad extends HTMLElement {
         constructor() {
