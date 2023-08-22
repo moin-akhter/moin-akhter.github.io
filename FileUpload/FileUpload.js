@@ -1,7 +1,7 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
-    `<table><tr><td><label for="fileInput">Select a File:</label></td><td><input type="file" id="fileInput"></td><td><button type="button" id="btnUpload">Upload File</button></td></tr></table>` ;   
+    `<table><tr><td><button style="display:block;width:120px; height:30px;" onclick="this._shadowRoot.getElementById('fileInput').click()">Select File : </button></td><td><input type="file" id="fileInput" stype="display:none"></td><td><button type="button" id="btnUpload">Upload File</button></td></tr></table>` ;   
     const fileData = [];
     
     class CustLoad extends HTMLElement {
@@ -32,7 +32,7 @@
             //console.log("Process new File: " + file); 
                         const file = this._fileInput.files[0];
             if(file) { 
-                console.log("Process File : " + file);
+                console.log("Process File : " + file.name);
                 const reader = new FileReader();
                    reader.onload = function(e) {
                       const fileContent = e.target.result;
