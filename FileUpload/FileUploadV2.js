@@ -31,6 +31,8 @@
             this._fileInput = this._shadowRoot.getElementById("fileInput"); //Get the file again to solve refresh issue.
             //console.log("Process new File: " + file); 
                         const file = this._fileInput.files[0];
+            fileData = [];
+            
             if(file) { 
                 console.log("Process File : " + file.name);
                 const reader = new FileReader();
